@@ -16,11 +16,19 @@ body {
     background-color: #333;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center align the navbar content */
+    align-items: center;
+    padding: 10px 20px;
     transition: background-color 0.3s;
     z-index: 1000;
     font-weight: bold; /* Make text bold */
     font-size: 18px; /* Make text slightly larger */
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .menu {
@@ -105,7 +113,6 @@ section {
     margin-top: 20px;
 }
 
-
 #about {
     background-color: #e3e3e3;
 }
@@ -113,7 +120,6 @@ section {
 #services {
     background-color: #d3d3d3;
 }
-
 
 #contact {
     background-color: #f2f2f2;
@@ -143,9 +149,10 @@ section {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
 }
+
 .contact-image:hover {
-    transform: translatex(-10px);
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transform: translateX(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .contact-content p {
@@ -161,7 +168,6 @@ section {
     font-size: 18px;
     line-height: 1.6;
 }
-
 
 .product-grid {
     display: flex;
@@ -195,8 +201,23 @@ section {
 
 @media (max-width: 768px) {
     .menu {
+        display: none;
         flex-direction: column;
         gap: 10px;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
     }
 
     header, section {
