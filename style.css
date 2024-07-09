@@ -1,0 +1,219 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 1000;
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Make text slightly larger */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #555;
+    color: #ff9900;
+}
+
+header {
+    background: #f4f4f4;
+    text-align: center;
+    padding-top: 100px; /* Adjust for fixed navbar */
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.home-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+#about, #services, #contact {
+    background: #fff;
+    margin-top: 20px;
+}
+
+.colorful-section {
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333; /* Dark text color */
+    padding: 50px;
+    text-align: center;
+    border-bottom: 1px solid #ccc; /* Border for separation */
+}
+
+.colorful-section h2 {
+    color: #8c52ff; /* Purple heading color */
+}
+
+.colorful-section .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.colorful-section .about-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.colorful-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+
+#about {
+    background-color: #e3e3e3;
+}
+
+#services {
+    background-color: #d3d3d3;
+}
+
+
+#contact {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 50px;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #8c52ff;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-content .contact-image {
+    width: 30%; /* Adjust width as needed */
+    text-align: center;
+}
+
+.contact-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+.contact-image:hover {
+    transform: translatex(-10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.contact-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 20px; /* Add padding for space */
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header, section {
+        padding: 40px 10px;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Center align heading in the products section */
+#products {
+    text-align: center;
+}
+
+#products h2 {
+    margin-bottom: 20px;
+}
